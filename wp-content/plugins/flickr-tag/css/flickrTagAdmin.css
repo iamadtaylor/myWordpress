@@ -1,0 +1,48 @@
+.wrapper {
+	padding: 15px;
+}
+
+.square {
+	width: 75px;
+	height: 75px;
+}
+
+.more {
+	font-style: italic;
+	font-size: 85%;
+
+	width: 400px;
+
+	margin: 0px;
+	margin-top: 10px;
+
+	padding: 0px;
+}
+
+.current {
+	padding: 3px;
+	background-color: #FFFFDD;
+	border: 1px solid #EAD43E;
+}
+
+.disabled {
+	padding: 3px;
+	background-color: #EFEFEF;
+	border: 1px solid #C0C0C0;
+	color: #B0B0B0;
+}
+
+.disabled A {
+	color: #B0B0B0;
+	text-decoration: none;
+	cursor: default;
+}
+
+.syntax {
+	font-family: courier; 
+	font-size: 12px;
+	padding: 3px; 
+	background-color: #EFEFEF;
+}
+
+

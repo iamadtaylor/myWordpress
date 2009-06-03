@@ -1,0 +1,412 @@
+/* Graublau Web - By fonts.info [http://www.fonts.info/info/press/free-fonts-for-font-face-embedding.htm]*/
+@font-face {
+font-family: "GraublauWeb";
+src: url("fonts/GraublauWeb.otf");
+}
+
+/*
+	GRID
+*/
+body {
+/*	background: #FFF url('../references/grid.jpg') repeat-y top left;*/
+	background: transparent url(../images/maskBg.png) repeat-y scroll 1080px  0px;
+}
+
+
+/*
+	BASIC GRID MARKUP
+*/
+
+
+#header *{
+	margin : 0px 10px;
+}
+
+#header {
+	position : relative;
+	overflow : hidden;
+	width : 100%;
+	height : 36px;
+	margin : 0px;
+	
+	background-color: rgb(0,0,0);
+/*	background-color: rgba(0,0,0,0.9);*/ /*not until jQuery UI supports RGBa*/
+	
+	font-family : "GraublauWeb", "Graublau Web","Trebuchet MS", sans-serif;
+	color : rgb(244,244,244);	
+	min-width : 1081px;
+	width : 100%;
+}
+	#header ol {
+		display: inline;
+		width : 844px;
+		
+		text-transform: uppercase;
+		text-shadow:  #000 1px 1px 3px;
+		letter-spacing: 1.5px;
+		font-size : 22px;
+		
+		list-style-type: decimal-leading-zero;
+		list-style-position: inside;
+		counter-reset: navItem;
+	    
+	
+	}
+		#header ol a {
+			color : rgb(244,244,244);
+			
+			text-decoration: none;
+		}
+			#header ol a:hover {
+				color : rgb(200,200,200);
+
+				text-decoration: none;
+			}
+		
+		#header ol li * {
+			margin : 0px;
+		}
+		#header ol li {
+			display: inline;
+			float : left;
+			width : 196px;
+			margin-left: 20px ;
+			margin-right: 0px ;
+			
+			padding-top : 9px;
+			height : 27px;
+		}
+		#header ol li:hover {
+			background-color : #DA9D17;
+		}
+			#header ol li.current_page_item a{
+				border-bottom : 3px solid #0DA8F0;
+			}
+				#header ol li:first-child {
+					margin-left: 154px ;
+				}
+				#header ol li:before {
+					      content: counter(navItem, decimal-leading-zero) ". ";
+					      counter-increment: navItem;
+					  }
+h2.pageName, h1.siteName, .meta {
+	position : absolute;
+	line-height : 1.5em;
+	letter-spacing : 2px;
+	z-index : 3;
+}
+	h1.siteName {
+		top : 18px;
+		left : 10px;
+		
+		text-transform : uppercase;
+		font-family : "GraublauWeb","Graublau Web","Trebuchet MS",sans-serif;
+		font-size : 16px;
+		letter-spacing : 3px;
+	}
+	
+	h2.pageName {
+		top : 40px;
+		left : 10px;
+		color : #333;
+	}
+	
+	.meta {
+		left : 864px;
+		top : 40px;
+		text-align : right;
+		width : 196px;
+		color : #333;
+		
+	}
+
+.content, .home, .portfolio, .article, .post, .four04 {
+	position : relative;
+	width : 1080px;
+}
+	.article, .post, .four04, .portfolio {
+		padding-top : 64px;
+	}
+
+.content p, .content h1, .content h2, .content h3 {
+	margin : 20px 154px;
+}
+	.content div p {
+		margin : 0px;
+	}
+
+
+.content .caption, .content .picture p {
+	color : #777;
+}
+
+code {
+	color: #79CBFC;
+}
+
+
+/*
+	footer 
+*/
+
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0px 0px -300px 0px;
+
+}
+#footer, #push {
+    min-height: 300px;
+}
+
+#footer {
+	background-color : rgba(0,0,0,0.9);
+	padding-bottom : 18px;
+}
+
+
+
+/*
+	SIZES AND PUSHES
+*/
+
+.one {
+	width : 52px;
+}
+.two {
+	width : 124px;
+}
+.three {
+	width : 196px;
+}
+.four {
+	width : 268px;
+}
+.five {
+	width : 340px;
+}
+.six {
+	width : 412px;
+}
+.seven {
+	width : 484px;
+}
+.eight {
+	width : 556px;
+}
+.nine {
+	width : 628px;
+}
+.ten {
+	width : 700px;
+}
+.eleven {
+	width : 772px;
+}
+.twelve {
+	width : 844px;
+}
+.thirteen {
+	width : 916px;
+}
+.fourteen {
+	width : 988px;
+}
+.fifteen {
+	width : 1060px;
+}
+
+
+/*Floats*/
+.left {
+	float : left;
+	margin-left : 10px;
+}
+.right {
+	float : right;
+	margin-right : 10px;
+	
+}
+
+/*Push lefts*/
+.pushLeftOne {
+	margin-left : 82px;
+}
+.pushLeftTwo {
+	margin-left : 154px;
+}
+.pushLeftThree {
+	margin-left : 226px;
+}
+.pushLeftFour {
+	margin-left : 298px;
+}
+.pushLeftFive {
+	margin-left : 370px;
+}
+.pushLeftSix {
+	margin-left : 442px;
+}
+.pushLeftSeven {
+	margin-left : 514px;
+}
+.pushLeftEight {
+	margin-left : 586px;
+}
+.pushLeftNine {
+	margin-left : 658px;
+}
+.pushLeftTen {
+	margin-left : 730px;
+}
+.pushLeftEleven {
+	margin-left : 802px;
+}
+.pushLeftTwelve {
+	margin-left : 874px;
+}
+.pushLeftThirteen {
+	margin-left : 946px;
+}
+.pushLeftFourteen {
+	margin-left : 1018px;
+}
+
+/*Push Rights*/
+.pushRightOne {
+	margin-right : 82px;
+}
+.pushRightTwo {
+	margin-right : 154px;
+}
+.pushRightThree {
+	margin-right : 226px;
+}
+.pushRightFour {
+	margin-right : 298px;
+}
+.pushRightFive {
+	margin-right : 370px;
+}
+.pushRightSix {
+	margin-right : 442px;
+}
+.pushRightSeven {
+	margin-right : 514px;
+}
+.pushRightEight {
+	margin-right : 586px;
+}
+.pushRightNine {
+	margin-right : 658px;
+}
+.pushRightTen {
+	margin-right : 730px;
+}
+.pushRightEleven {
+	margin-right : 802px;
+}
+.pushRightTwelve {
+	margin-right : 874px;
+}
+.pushRightThirteen {
+	margin-right : 946px;
+}
+.pushRightFourteen {
+	margin-right : 1018px;
+}
+
+
+/*
+	SPEECH BUBBLE FROM DAVID DESANDRO [http://desandro.com/resources/css-speech-bubble-icon] - A GENIUS!
+*/
+/**** Speech Bubble Icons *****/
+.spch-bub-inside {
+	position: relative;
+}
+a.spch-bub-inside {
+	color: #DA9D17;
+	text-decoration: none;
+}
+.spch-bub-inside em {
+	font-style: normal;
+}
+.spch-bub-inside em {
+	background: rgba(45,60,111,1);
+	color: #FFF;
+	padding: 0.1em 0.4em 0;
+	-moz-border-radius: 0.25em;
+	-webkit-border-radius: 0.25em;
+	border-radius: 0.25em;
+	position: relative;
+}
+.spch-bub-inside .point {
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 1em;
+	left: 0.4em;
+	display: block;
+	border-left: 0.45em solid  rgba(45,60,111,1); 
+	border-bottom: 0.45em solid #FFF; /* IE fix */
+	border-bottom: 0.45em solid rgba(0,0,0,0); 
+	overflow: hidden; /* IE fix */
+}
+a.spch-bub-inside:hover {
+	color: #000;
+}
+a.spch-bub-inside:hover em {
+	cursor: pointer;
+	background: #000;
+	color: #FFF;
+}
+a.spch-bub-inside:hover .point {
+	border-left: 0.5em solid #000; 
+}
+
+
+/*
+	BAG OF TRICKS
+*/
+
+#mask {
+	position : absolute;
+	left : 1080px;
+	top : 36px;
+/*	bottom : 0px;*/
+	right : 0px;
+	height : 100%;
+	min-height : 100%;
+	background: transparent url(../images/mask.png) repeat top left;
+	}
+
+.noMargin {
+	margin : 0px; /*Terribly non-semantic I know*/
+}
+
+.clear {
+	clear : both;
+	width : 0px;
+	height : 0px;
+	outline : none;
+	margin : 0px;
+	padding : 0px;
+}
+
+.clearfix:after {content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;}
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */

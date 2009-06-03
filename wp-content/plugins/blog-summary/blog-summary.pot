@@ -1,0 +1,61 @@
+# Blog Summary for WordPress
+# Copyright (C) 2008 Scott Allan Wallick
+# This file is part of Blog Summary.
+# Blog Summary is free software: you can redistribute it and/or
+# modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation, either version 3 of
+# the License, or (at your option) any later version.
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.1.2\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/blog-summary\n"
+"POT-Creation-Date: 2008-07-29 23:06+0000\n"
+"PO-Revision-Date: 2008-07-29 23:06+0000\n"
+"Last-Translator: Scott Allan Wallick <s@plaintxt.org>\n"
+"Language-Team: Scott Allan Wallick <s@plaintxt.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: blog-summary.php:74
+#, php-format
+msgid "Permalink to %s"
+msgstr ""
+
+#: blog-summary.php:76
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: blog-summary.php:78
+#, php-format
+msgid "Comments to %s"
+msgstr ""
+
+#: blog-summary.php:78
+#, php-format
+msgid "Comments (%s)"
+msgstr ""
+
+#. Plugin Name of an extension
+msgid "Blog Summary"
+msgstr ""
+
+#. Plugin URI of an extension
+msgid "http://www.plaintxt.org/experiments/blog-summary/"
+msgstr ""
+
+#. Description of an extension
+msgid ""
+"Insert a list of latest blog posts using the shortcode <code>[blog-summary "
+"count=&quot;N&quot;]</code> (default is 5) in a semantic hAtom-enabled list. "
+"A plaintxt.org experiment for WordPress."
+msgstr ""
+
+#. Author of an extension
+msgid "Scott Allan Wallick"
+msgstr ""
+
+#. Author URI of an extension
+msgid "http://scottwallick.com/"
+msgstr ""

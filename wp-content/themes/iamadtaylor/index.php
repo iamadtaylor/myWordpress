@@ -1,4 +1,13 @@
 <?php get_header(); ?>
+		<script src="<?php echo(get_bloginfo('template_directory')); ?>/js/onload.js" type="text/javascript"></script>
+		
+	</head>
+	<body>
+			<div id="wrap">
+				<?php include (TEMPLATEPATH . '/headNav.php'); ?>
+				
+				<div class="<?php echo get_post_meta($post->ID, 'contentClassName', true); ?> clearfix">
+						<?php include (TEMPLATEPATH . '/pageData.php'); ?>
 
 <div id="post">
  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -25,6 +34,13 @@
  </div> <!-- end #postnavigation -->
 
 </div> <!-- end #post -->
+	</div>
 
-<?php get_sidebar(); ?>
+	<div id="push" >&nbsp;</div>
+</div>
+
+
+
+
+
 <?php get_footer(); ?>

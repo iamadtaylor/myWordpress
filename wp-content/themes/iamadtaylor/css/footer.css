@@ -1,0 +1,165 @@
+#footer {
+	background-color : #000;
+}
+#footer {
+		background: rgba(0, 0, 0, 0.9) url('../references/grid.jpg') repeat-y top left;
+		color : #ccc;
+		min-width : 1081px;
+		width : 100%;
+}
+
+#footer {
+	background-image : none;
+	
+}
+
+/*
+	SET FLOATS
+*/
+#footer #leftFooter, #footer #rightFooter {
+	float : left;
+	margin : 0px 10px;
+		
+}
+
+	/*
+		SET WIDTHS
+	*/
+	#footer #leftFooter{
+		width : 772px;
+	}
+	
+	#footer #rightFooter {
+		width : 268px;
+	}
+		#footer #about, #footer #recentPosts {
+			width : 772px;
+		}
+	
+		 #footer #socialHub, #footer #flickr {
+			width : 268px;
+			margin-bottom : 21px;
+		}
+
+/*
+	STYLING
+*/
+
+
+#footer #about p {
+	padding-left : 52px;
+}
+
+#footer #leftFooter {
+	border-right: 1px solid #999;
+}
+
+
+	
+	#footer #rightFooter #flickr img, #footer #rightFooter #flickr img + img + img + img {
+		margin-bottom : 20px;
+		margin-left : 40px;
+		
+		border : 20px solid rgba(255,255,255,0.2);
+		opacity : 0.5;
+	}
+		#footer #rightFooter #flickr img:hover {
+			opacity : 1;
+		}
+
+
+	#footer #rightFooter #contact ul{
+		list-style: none inside;
+		margin : 0px;
+		margin-bottom : 36px;
+	}
+		#footer #rightFooter #contact ul li:first-child a{
+			font-size : 18px;
+			color : #DA9D17;
+			text-shadow: 0.2em 0.5em 0.1em #DDD;
+		}
+		#footer #rightFooter #contact ul li {
+			margin-left : 40px;
+		}
+		#footer #rightFooter #contact ul li:first-child {
+			margin-bottom : 19px;
+			margin-left : 0px;
+		}
+			#footer #rightFooter #contact ul li a.im {
+				text-decoration: underline;
+				color : #0da8f0;
+			}
+				#footer #rightFooter #contact ul li a.im:hover {
+					color : #DA9D17
+				}
+			
+		
+		#footer #rightFooter #socialHub ul {
+			list-style: none inside;
+			margin-left : 40px;
+		}
+			#footer #rightFooter #socialHub ul li{
+				float : left;
+				width : 32px;
+				height : 32px;
+			}
+				#footer #rightFooter #socialHub ul li + li{
+					margin-left : 10px;
+				}
+			#footer #rightFooter #socialHub ul li span {
+				display : none;
+			}
+			#footer #rightFooter #socialHub ul li a img{
+				opacity : 0.5;
+			}
+			#footer #rightFooter #socialHub ul li a:hover img{
+				opacity : 1;
+			}
+/*
+	TYPE
+*/
+#footer a {
+	color : #ccc;
+	text-decoration : none;
+	cursor : pointer;
+}
+
+#footer h2 {
+	font-size : 36px;
+	line-height : 2em;
+	
+	text-transform: lowercase;
+	font-family : "GraublauWeb", "Graublau Web","Trebuchet MS", sans-serif;
+	
+}
+
+#footer h3 {
+	font-size : 20px;
+	line-height :32px;
+}
+	#footer a:hover {
+		text-decoration: underline;
+		color : #0da8f0;
+	}
+
+#footer p {
+		font-family : "Helvetica Neue",Arial,Helvetica,sans-serif;
+		letter-spacing : 0.09em;
+		
+		font-size : 11px;	
+}
+
+	#footer #rightFooter #contact ul{
+		font-size : 14px;
+		line-height : 18px;
+		margin-top : 32px;
+		
+	}
+		#footer #rightFooter #contact ul li:first-child a{
+			font-family : "GraublauWeb", "Graublau Web","Trebuchet MS", sans-serif;
+			
+			font-size : 30px;
+			color : #DA9D17;
+			text-shadow : 2px 0px #333;
+		}
+	

@@ -1,0 +1,26 @@
+#footerText {
+	margin-top: 5px;
+	font-size: x-small;
+}
+h2.flickrheader {
+	float: left;
+	margin-right: 5px;
+}
+div.flickrlogo {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+div.flickrlogo img {
+	border:0;
+}
+.flickrImage img {
+	margin-top: 10px;
+	margin-left: 0px;
+	width: 50px;
+	height: 50px;
+	border: 1px solid #ccc;
+}
+div#photoAlbum {
+	min-width:115px;
+}

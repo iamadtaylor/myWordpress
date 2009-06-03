@@ -20,7 +20,8 @@
 <?php else : ?>
 
 <?php if ($comments) : ?>
-
+	<h3>Comments</h3>
+	<p>If you have any feelings on this subject then please make a comment and I shall be sure to reply to you. Only rules are; don't be an arse. <br/>You can follow any responses to this entry through the <?php comments_rss_link('RSS 2.0'); ?> feed.</p>
  <ul id="commentlist">
   <?php foreach ($comments as $comment) : ?>
 	
@@ -31,10 +32,8 @@
 					<?php echo get_avatar( $comment, 80 ); ?>
 					<abbr title="<?php comment_date('Y-m-d') ?>"><?php comment_date('d/m/Y') ?></abbr>
 					<blockquote>
-						<p>
 						<?php if ($comment->comment_approved == '0') : echo "<em>Your comment is awaiting moderation.</em>"; endif; ?>
 						<?php comment_text(); ?>	
-						</p>
 					</blockquote>
 				</dd>
 			</dl>
@@ -46,6 +45,8 @@
   
  <?php else : // this is displayed if there are no comments so far ?>
  <?php if ('open' == $post-> comment_status) : ?>
+	<h3>No comments</h3>
+	<p>If you have any feelings on this subject then please make a comment and I shall be sure to reply to you. Only rules are; don't be an arse. <br/>You can follow any responses to this entry through the <?php comments_rss_link('RSS 2.0'); ?> feed.</p>
  <!-- If comments are open, but there are no comments. -->
  <?php else : // comments are closed ?>
  <!-- If comments are closed. -->
@@ -64,6 +65,25 @@
 		<ul>
 			<?php if ( $user_ID ) : ?>
 			   <li>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="<?php _e('Log out of this account') ?>"> (Logout) </a> </li>
+			
+				<li>
+					<strong>XHTML:</strong>
+					You can use these tags: 
+					<code><?php echo allowed_tags(); ?></code>
+				</li>
+
+				<li>
+			     <textarea tabindex="4" rows="10" cols="64" id="s4" name="comment"></textarea>
+			    </li>
+
+				<li>
+				     <input type="submit" value="Submit Comment" tabindex="5" id="sbutt" name="submit"/>
+				     <input type="hidden" value="<?php echo $id;?>"  name="comment_post_ID"/>
+				</li>
+
+		  </ul>
+		<?php  do_action('comment_form', $post->ID);?>
+	</form>
 			   <?php else : ?>
 			
 			<li>
@@ -88,7 +108,7 @@
 			</li>
 		    
 			<li>
-		     <textarea tabindex="4" rows="10" cols="72" id="s4" name="comment"></textarea>
+		     <textarea tabindex="4" rows="10" cols="64" id="s4" name="comment"></textarea>
 		    </li>
 		
 			<li>

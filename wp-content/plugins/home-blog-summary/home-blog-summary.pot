@@ -1,0 +1,36 @@
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: home-blog-summary.php:74
+#, php-format
+msgid "Permalink to %s"
+msgstr ""
+
+#: home-blog-summary.php:76
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: home-blog-summary.php:78
+#, php-format
+msgid "Comments to %s"
+msgstr ""
+
+#: home-blog-summary.php:78
+#, php-format
+msgid "Comments (%s)"
+msgstr ""
+
+#. Plugin Name of an extension
+msgid "Home Blog Summary"
+msgstr ""
+
+
+
+#. Description of an extension
+msgid ""
+"Insert a list of latest blog posts using the shortcode <code>[blog-summary "
+"count=&quot;N&quot;]</code> (default is 5) in a semantic hAtom-enabled list. "
+"A plaintxt.org experiment for WordPress."
+msgstr ""
+

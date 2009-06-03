@@ -1,53 +1,44 @@
-<div id="sidebar">
- <ul>
-  <!-- Widgetized sidebar, if you have the plugin installed. If you don't have it installed, then I did all this work for nothing! -->
-  <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
+<div id="rightFooter">
+	<div id="contact">
+		<ul>
+			<li><a href="mailto:hi@iamadtaylor.com" title="Email address" class="email pref">hi@iamadtaylor.com</a></li>
+			<li class="tel" lang="en-gb">
+				<span class="type">
+				    <span class="value-title" title="cell"> </span>
+				      mobile :
+				    </span>
+				<span class="value">07595 300 841</span>
+			</li>
+			<li><a title="Contact me throught Jabber" href="xmpp://ad@iamadtaylor.com" class="url im pref" rel="me">Contact me through Jabber</a></li>
+		</ul>
+	</div>
+	
+	<!-- <div id="search">
+		<h2>Search</h2>
+		<?php include (TEMPLATEPATH . '/searchform.php'); ?>
+	    
+	</div> -->
+	<div id="socialHub" class="clearfix">
+		<h2>Social Hub</h2>
+		<ul>
+			<li><a href="https://twitter.com/iamadtaylor" rel="me" title="Ad Taylors twitter page"><img src="<?php echo(get_bloginfo('template_directory')); ?>/images/hicons/twitter_32.png" width="32" height="32" alt="Twitter 32"/><span class="socialText">Twitter</span></a></li>
+			<li><a href="http://www.vimeo.com/adtaylor" rel="me" title="Ad Taylors vimeo page"><img src="<?php echo(get_bloginfo('template_directory')); ?>/images/hicons/vimeo_32.png" width="32" height="32" alt="Vimeo 32"/><span class="socialText">Vimeo</span></a></li>
+			<li><a href="http://www.flickr.com/photos/adhoc01/" rel="me" title="Ad Taylors Flickr page"><img src="<?php echo(get_bloginfo('template_directory')); ?>/images/hicons/flickr_32.png" width="32" height="32" alt="Flickr 32"/><span class="socialText">Flickr</span></a></li>
+			<li><a href="http://delicious.com/iamadtaylor" rel="me" title="Ad Taylors Delicious page"><img src="<?php echo(get_bloginfo('template_directory')); ?>/images/hicons/delicious_32x32.png" width="32" height="32" alt="Delicious 32x32"/><span class="socialText">Delicious</span></a></li>
+			<li><a href="http://www.last.fm/user/iamadtaylor" rel="me" title="Ad Taylors Last.fm page"><img src="<?php echo(get_bloginfo('template_directory')); ?>/images/hicons/lastfm_32.png" width="32" height="32" alt="Lastfm 32"/><span class="socialText">Last.fm</span></a></li>
+		</ul>
+	</div>
+	<div id="flickr">
+		<h2>Flickr</h2>
+		<?php
+		if(function_exists('displayRandomFlickrPhotos'))
+		{
+		displayRandomFlickrPhotos();
+		}
+		
+		?>
+	</div>
 
-   <?php if ( is_404() || is_category() || is_day() || is_month() || is_year() || is_search() || is_paged() ) { ?>
-    <?php /* If this is a 404 page */ if (is_404()) { ?>
-    <?php /* If this is a category archive */ } elseif (is_category()) { ?>
-     <p>You are currently browsing the archives for the <?php single_cat_title(''); ?> category.</p>
-    <?php /* If this is a yearly archive */ } elseif (is_day()) { ?>
-     <p>You are currently browsing the <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> blog archives for the day <?php the_time('l, F jS, Y'); ?>.</p>
-    <?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
-     <p>You are currently browsing the <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> blog archives for <?php the_time('F, Y'); ?>.</p>
-    <?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
-     <p>You are currently browsing the <a href="<?php bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> blog archives for the year <?php the_time('Y'); ?>.</p>
-    <?php /* If this is a monthly archive */ } elseif (is_search()) { ?>
-     <p>You have searched the <a href="<?php echo bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> blog archives for '<?php the_search_query(); ?>'.</p>
-    <?php /* If this is a monthly archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-     <p>You are currently browsing the <a href="<?php echo bloginfo('url'); ?>/"><?php echo bloginfo('name'); ?></a> blog archives.</p>
-    <?php } ?>
-   <?php }?>
-   
-   <li>
-    <?php include (TEMPLATEPATH . '/searchform.php'); ?>
-   </li>
+</div>
 
-   <li>
-    <?php wp_list_pages('title_li=<h2>Pages</h2>' ); ?>
-   <li>
 
-   <li>
-    <h2>Recent Posts</h2>
-    <?php get_archives('postbypost', 10); ?>
-   </li>
-
-   <li>
-    <h2>Monthly Archives</h2>
-    <ul>
-     <?php wp_get_archives('type=monthly'); ?>
-    </ul>
-   </li>
-
-   <li>
-    <?php wp_list_categories('show_count=1&title_li=<h2>Categories</h2>'); ?>
-   </li>
-
-   <li>
-    <h2>Blogroll</h2>
-    <?php wp_list_bookmarks(); ?>
-   </li>
-  <?php endif; ?>
- </ul>
-</div><!-- end #sidebar -->

@@ -1,0 +1,20 @@
+/*
+Theme Name: I am Ad Taylor
+Theme URI: 
+Description: Magazine edition
+Version: 1
+Author: Ad Taylor
+Author URI: www.iamadtaylor.com
+*/
+
+/* Reset browser defaults */
+@import url('css/reset.css');
+
+/* Apply basic typography styles */
+@import url('css/typography.css');
+
+/* Apply basic universal styles and structure*/
+@import url('css/defaults.css');
+
+/* Apply basic footer styles and structure*/
+@import url('css/footer.css');
