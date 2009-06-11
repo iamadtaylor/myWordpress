@@ -89,41 +89,41 @@ body {
 					      content: counter(navItem, decimal-leading-zero) ". ";
 					      counter-increment: navItem;
 					  }
-h2.pageName, h1.siteName, .meta {
-	position : absolute;
-	line-height : 1.5em;
-	letter-spacing : 2px;
-	z-index : 3;
-}
-	h1.siteName {
-		top : 18px;
-		left : 10px;
-		
-		text-transform : uppercase;
-		font-family : "GraublauWeb","Graublau Web","Trebuchet MS",sans-serif;
-		font-size : 16px;
-		letter-spacing : 3px;
+	h2.pageName, h1.siteName, h2.pageName + .meta {
+		position : absolute;
+		line-height : 1.5em;
+		letter-spacing : 2px;
+		z-index : 3;
 	}
-	
-	h2.pageName {
-		top : 40px;
-		left : 10px;
-		color : #333;
-	}
-	
-	.meta {
-		left : 864px;
-		top : 40px;
-		text-align : right;
-		width : 196px;
-		color : #333;
-		
-	}
+		h1.siteName {
+			top : 18px;
+			left : 10px;
 
-.content, .home, .portfolio, .article, .post, .four04 {
-	position : relative;
-	width : 1080px;
-}
+			text-transform : uppercase;
+			font-family : "GraublauWeb","Graublau Web","Trebuchet MS",sans-serif;
+			font-size : 16px;
+			letter-spacing : 3px;
+		}
+
+		h2.pageName {
+			top : 40px;
+			left : 10px;
+			color : #333;
+		}
+
+		h2.pageName + .meta {
+			left : 864px;
+			top : 40px;
+			text-align : right;
+			width : 196px;
+			color : #333;
+
+		}
+
+	.content, .contents , .portfolio, .article, .post, .four04 {
+		position : relative;
+		width : 1080px;
+	}
 	.article, .post, .four04, .portfolio {
 		padding-top : 64px;
 	}

@@ -72,7 +72,7 @@ function blog_summary_shortcode($attr) {
 			// Post title
 			$output .= "\n" . '<' . $titletag . ' class="entry-title"><a href="' .  get_permalink() . '" title="' . sprintf( __( 'Permalink to %s', 'blog_summary' ), the_title_attribute('echo=0') ) . '" rel="bookmark">' . get_the_title() . '</a></' . $titletag . '>';
 			// Post date with hAtom support
-			$output .= "\n" . '<' . $datetag . ' class="entry-date"><span class="published"><span class="value-title" title="' . get_the_time('Y-m-d') . '">' . sprintf( __( '%s', 'blog_summary' ), the_date( '', '', '', false ) ) . '</span><span class="value-title" title="'.get_the_time('H:i:s').'"></span></span></' . $datetag . '>';
+			$output .= "\n" . '<' . $datetag . ' class="entry-date"><span class="published"><span class="value-title" title="' . get_the_time('Y-m-d') . '">'.get_the_time('l, j F, Y'). '</span><span class="value-title" title="'.get_the_time('H:i:s').'"></span></span></' . $datetag . '>';
 		
 			// Post excerpt with hAtom support
 			$output .= "\n" . '<' . $summarytag . ' class="entry-summary">' . "\n" . apply_filters( 'the_excerpt', get_the_excerpt() ) . '</' . $summarytag . '>';

@@ -16,14 +16,20 @@
 		<?php } else {   ?>
 		<link rel="stylesheet" href="<?php echo(get_bloginfo('template_directory')); ?>/css/footerComments.css" type="text/css" media="screen" title="no title" charset="utf-8" />	
 		<?php }?>		
-		<link rel="stylesheet" href="<?php echo(get_bloginfo('template_directory')); ?>/css/contents.css" type="text/css" media="screen" title="no title" charset="utf-8" />
-
+		
+		<link rel="stylesheet" href="<?php echo(get_bloginfo('template_directory')); ?>/css/<?php if(is_category()) {echo single_cat_title(); } else { echo get_post_meta($post->ID, 'contentClassName', true);} ?>.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+		
 		<?php wp_head(); ?>	
+		
 		
 
 		<script src="<?php echo(get_bloginfo('template_directory')); ?>/js/jquery.js" type="text/javascript"></script>
 		<script src="<?php echo(get_bloginfo('template_directory')); ?>/js/jquery.fontavailable.min.js" type="text/javascript"></script>
 		<script src="<?php echo(get_bloginfo('template_directory')); ?>/js/jquery-ui.min.js" type="text/javascript"></script>
-
+		<?php if (get_post_meta($post->ID, 'extraJavascript', true)) {echo '<script src="'.get_bloginfo('template_directory').'/js/'.get_post_meta($post->ID, 'extraJavascript', true).'" type="text/javascript"></script>';} ?>
 		<script src="<?php echo(get_bloginfo('template_directory')); ?>/js/cufon-yui.js" type="text/javascript"></script>
 		<script src="<?php echo(get_bloginfo('template_directory')); ?>/js/GraublauWeb_400-GraublauWeb_700.font.js" type="text/javascript"></script>
+		<script src="<?php echo(get_bloginfo('template_directory')); ?>/js/<?php echo get_post_meta($post->ID, 'javascriptOnLoad', true); ?>onload.js" type="text/javascript"></script>
+
+	</head>
+	<body>

@@ -1,8 +1,5 @@
 <?php get_header(); ?>
-		<script src="<?php echo(get_bloginfo('template_directory')); ?>/js/onload.js" type="text/javascript"></script>
-		
-	</head>
-	<body>
+THIS IS A PAGE.PHP
 			<div id="wrap">
 <?php include (TEMPLATEPATH . '/headNav.php'); ?>
 				

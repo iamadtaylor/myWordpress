@@ -1,0 +1,10 @@
+body {
+	background-color: #e4e8e4;
+/*	background-image: none;*/
+}
+
+.features {
+	position : relative;
+	width : 1080px;
+	padding-top : 64px;
+}

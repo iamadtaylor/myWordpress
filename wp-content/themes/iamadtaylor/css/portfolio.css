@@ -1,0 +1,203 @@
+body {
+	background-color: #e4e8e4;
+/*	background-image: none;*/
+}
+#slideshowPortfolio {
+	position : relative;
+	width : 950px;
+	margin : 50px auto;
+}
+	#slideshowPortfolio a#prev , #slideshowPortfolio a#next {
+		position : absolute;
+		width: 112px;
+		height: 187px;
+		top : 132px;
+		text-indent : -9999px;
+	}
+	#slideshowPortfolio a#next {
+		background: url('../images/portfolio/nextButtonSprite.png') no-repeat scroll 0px 0px;
+		left : 843px;
+	}
+		#slideshowPortfolio a#next:hover {
+			background: url('../images/portfolio/nextButtonSprite.png') no-repeat scroll 1px -187px ;
+			left : 843px;
+		}
+		#slideshowPortfolio a#next:hover.inactive {
+			background: url('../images/portfolio/nextButtonSprite.png') no-repeat scroll 1px -374px;
+		}
+		#slideshowPortfolio a#next.inactive {
+			background: url('../images/portfolio/nextButtonSprite.png') no-repeat scroll 1px -374px;
+		}
+	
+	#slideshowPortfolio a#prev {
+		background: url('../images/portfolio/prevButtonSprite.png') no-repeat scroll 0px 0px;
+	}
+		#slideshowPortfolio a#prev:hover {
+			background: url('../images/portfolio/prevButtonSprite.png') no-repeat scroll -1px -187px;
+		}
+		#slideshowPortfolio a#prev:hover.inactive {
+			background: url('../images/portfolio/prevButtonSprite.png') no-repeat scroll -1px -374px;
+		}
+		#slideshowPortfolio a#prev.inactive {
+			background: url('../images/portfolio/prevButtonSprite.png') no-repeat scroll -1px -374px;
+		}
+	
+	a.externalLink {
+		position :absolute;
+		top : 333px;
+		
+		color : #fff;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size : 16px;
+		
+		background-color : #DA9D17;
+		border : 5px solid #fff;
+		border-left : none;
+		padding : 5px 5px 5px 45px;
+		z-index : 6;
+		
+	
+	}
+		a.externalLink:hover {
+			opacity : 0.5	;
+		}
+	
+	ul#portfolio {
+			position : relative;
+			width: 696px;
+			height: 436px;
+			overflow : hidden;
+			margin : 0px auto;
+		
+		}
+	#portfolioFrame {
+			position : relative;
+			width: 697px;
+			height: 436px;
+			overflow : hidden;
+			margin : 0px auto;
+
+		}
+			ul#portfolio li {
+				position : absolute;
+				top : 0px;
+				left : 0px;
+				width: 697px;
+				height: 436px;
+				z-index : 3;
+				display : none;
+			}
+				ul#portfolio li:first-child {
+					display : inline;
+				}
+			.portfolioBorderTop , .portfolioBorderBottom, .portfolioBorderLeft, .portfolioBorderRight {
+				position : absolute;
+				top : 0px;
+				z-index : 5;
+				left : 127px;
+			}
+			    .portfolioBorderTop {
+			    	background: url('../images/portfolio/viewPort.png') no-repeat scroll top left;
+			    	width: 697px;
+			    	height: 20px;
+			    }
+				.portfolioBorderBottom {
+					top : 416px;
+			    	background: url('../images/portfolio/viewPort.png') no-repeat scroll bottom left;
+			    	width: 697px;
+			    	height: 20px;
+			    }
+				.portfolioBorderLeft {
+			    	background: url('../images/portfolio/viewPort.png') no-repeat scroll top left;
+			    	width: 20px;
+					height: 436px;
+					}
+				.portfolioBorderRight {
+					right : 0px;
+			    	background: url('../images/portfolio/viewPort.png') no-repeat scroll top right;
+			    	width: 20px;
+					height: 436px;
+					left : 804px;
+					}
+				
+			.portfolioShadowTop , .portfolioShadowBottom, .portfolioShadowLeft, .portfolioShadowRight {
+				position : absolute;
+				top : 0px;
+				z-index : 5;
+				left : 127px;
+			}
+			    .portfolioShadowTop {
+			    	background: url('../images/portfolio/shadowPort.png') no-repeat scroll top left;
+			    	width: 697px;
+			    	height: 60px;
+					left : 127px;
+			    }
+				.portfolioShadowBottom {
+					top : 379px;
+			    	background: url('../images/portfolio/shadowPort.png') no-repeat scroll bottom left;
+			    	width: 697px;
+			    	height: 60px;
+			    }
+				.portfolioShadowLeft {
+			    	background: url('../images/portfolio/shadowPort.png') no-repeat scroll 0px -60px;
+					top : 60px;
+			    	width: 60px;
+					height: 319px;
+					}
+				.portfolioShadowRight {
+					top : 60px;
+					right : 0px;
+			    	background: url('../images/portfolio/shadowPort.png') no-repeat scroll -637px -60px;
+			    	width: 60px;
+					height: 319px;
+					left : 764px;
+					}
+	
+		
+			ul#portfolio li img, ul#portfolio li dl { 
+				position : absolute;
+				z-index : 4;
+			
+			}
+			
+			
+				
+			 ul#portfolio li dl {
+				width : 100%;
+				min-height : 70px;
+				top : 313px;
+				margin : 0px;
+				background-color: #1d1d1d;
+				background-color: rgba(29,29,29,0.9	);
+				border-top : 5px solid rgb(100,100,100);
+				border-bottom : 5px solid rgb(100,100,100);
+				border-color: rgba(255,255,255,0.2);
+				z-index : 5;
+			}
+				ul#portfolio li dl:hover {
+					opacity : 0.1;
+				}
+				ul#portfolio li dd, ul#portfolio li dt { 
+					float : right;
+					width : 500px;
+					text-align : right;
+					line-height : 1.3em;
+					padding-right : 20px;
+
+				}
+					ul#portfolio li dt {
+						font-weight : normal;
+						font-family :   "GraublauWeb", "Graublau Web","Trebuchet MS", sans-serif;
+						letter-spacing : 2px;
+						font-size : 30px;
+						color : #ccc;
+					}
+					ul#portfolio li dd {
+/*						font-size : 18px;*/
+						color : #DA9D17;
+						letter-spacing : 1.5px;
+						margin-bottom : 9px;
+						
+					}
+					

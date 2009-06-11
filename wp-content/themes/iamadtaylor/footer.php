@@ -43,7 +43,7 @@
 								'entrytag'    =>  'li',
 								'titletag'    =>  'h3',
 								'datetag'     =>  'span',
-								'summarytag'  =>  'div',
+								'summarytag'  =>  'p',
 							);
 						
 						
