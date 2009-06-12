@@ -88,33 +88,46 @@ function getTags($cats,$taglist) {
 
 function dateArchives() { 
 	global $wpdb, $post;
-	?>
-	<table id="archives"> 
-	  <?php $years = $wpdb->get_col("SELECT DISTINCT YEAR(post_date) FROM $wpdb->posts WHERE post_status = 'publish' AND post_type = 'post' ORDER BY post_date ASC"); 
-	  foreach($years as $year) { 
-	    $months = $wpdb->get_col("SELECT DISTINCT MONTH(post_date) FROM $wpdb->posts WHERE YEAR(post_date) = $year AND post_status = 'publish' AND post_type = 'post' ORDER BY post_date ASC"); ?> 
-	    <tr> 
-	      <td><?php echo($year) ?></td> 
-	      <td> 
-	        <table> 
-	          <tr> 
-	            <?php foreach($months as $month) { 
-	              $month_text = date('M', mktime(0, 0, 0, $month, 1, $year)); ?> 
-	              <td><a href="#month"><?php echo($month_text) ?></a></td> 
-	            <?php } ?> 
-	          </tr> 
-
-	          <tr> 
-	            <?php foreach($months as $month) { 
-	              $posts = $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->posts WHERE YEAR(post_date) = $year AND MONTH(post_date) = $month AND post_status = 'publish' AND post_type = 'post' ORDER BY post_date ASC"); ?> 
-	              <td><a href="#month"><?php echo($posts) ?></a></td> 
-	            <?php } ?> 
-	          </tr> 
-	        </table> 
-	      </td> 
-	    </tr> 
-	  <?php } ?> 
-	</table><?php 
+	$html = '	<table class="archive">';
+	
+	$years = $wpdb->get_col("SELECT DISTINCT YEAR(post_date) 
+							FROM $wpdb->posts 
+							WHERE post_status = 'publish' 
+							AND post_type = 'post' 
+							ORDER BY post_date DESC");
+							
+	foreach($years as $year) { 
+	$months = $wpdb->get_col("SELECT DISTINCT MONTH(post_date) 
+							FROM $wpdb->posts 
+							WHERE YEAR(post_date) = $year 
+							AND post_status = 'publish' 
+							AND post_type = 'post' 
+							ORDER BY post_date DESC");
+		$html .= '
+		<tr>
+			<th rowspan="'.count($months).'"  scope="row"><a href="/'.$year.'" rel="bookmark">'.$year.'</a></th>';
+			
+		$count = 1;
+	    
+	          foreach($months as $month) {
+					$month_text = date('M', mktime(0, 0, 0, $month, 1, $year));
+					
+					$posts = $wpdb->get_var("SELECT COUNT(*) 
+											FROM $wpdb->posts 
+											WHERE YEAR(post_date) = $year 
+											AND MONTH(post_date) = $month AND post_status = 'publish' 
+											AND post_type = 'post' 
+											ORDER BY post_date DESC");
+											
+					if($count == 1) { $count = 2;} else { $html .= '<tr>';}
+					
+					$html .= 	'<td><a href="/'.$year.'/'.$month.'" rel="bookmark">'.$month_text.'  ( '.$posts.' )</a></td>
+	 				</tr>';
+	            }
+		 
+	}	
+	$html .= '	</table>';
+	return $html;
 }
 
 ?>

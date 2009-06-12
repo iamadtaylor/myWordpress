@@ -27,7 +27,9 @@ $tags = $_GET['tags'];
 								</span>
 							
 								<p class="entry-summary">
+									<span>
 									<?php the_excerpt() ?>
+									</span>
 								</p>
 
 								</li>
@@ -40,7 +42,8 @@ $tags = $_GET['tags'];
 									echo categoryTaggerList();
 								?>
 							<h2 class="tag">by date</h2>
-								<?php dateArchives(); ?>
+							<?php $dates =  dateArchives();
+							 	echo $dates;?>
 						<?php else : ?>
 
 						 <h2>Not Found</h2>
